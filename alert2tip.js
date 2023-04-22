@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         alert2tip
-// @namespace    https://github.com/JoiWeT/tampermonkey-scripts
-// @supportURL   https://github.com/JoiWeT/tampermonkey-scripts/issues
+// @namespace    https://github.com/JoiWeT/alert2tip
+// @supportURL   https://github.com/JoiWeT/alert2tip/issues
 // @version      1.0
 // @description  try to take over the alert!
 // @author       JoiWeT
@@ -50,7 +50,7 @@ function fadeTips(pos) {
     clearTimeout(tipsFadeCronIds[pos]);
 }
 function clearTipsFadeCron(pos) {
-    clearTimeout(tipsFadeCronIds[pos]); //Êó±êÀë¿ªÊ±ÈÔÊ¹ÓÃ±¾posÉèÖÃÈÎÎñ£¬Çå¿ÕÓë·ñÎŞËùÎ½
+    clearTimeout(tipsFadeCronIds[pos]); //é¼ æ ‡ç¦»å¼€æ—¶ä»ä½¿ç”¨æœ¬posè®¾ç½®ä»»åŠ¡ï¼Œæ¸…ç©ºä¸å¦æ— æ‰€è°“
 }
 function setTipsFadeCron(pos) {
     tipsFadeCronIds[pos]=window.setTimeout(function() {fadeTips(pos);},2000);
