@@ -38,8 +38,8 @@ function alert2tips(...message) {
     var heightPos=(10+8*(pos%10));
     alert_tip_div.style="opacity:0.8;width:30%;right:35%;left:35%;position: absolute; top:"+heightPos+"%;z-index:999; text-align:center; font-size:24px; padding:10px 20px; background-color:#dff0d8;";
     alert_tip_div.innerText=message;
-    alert_tip_div.addEventListener('mouseenter', function() { clearTipsFadeCron(pos); }, false); //mouseover
-    alert_tip_div.addEventListener('mouseleave', function() { setTipsFadeCron(pos); }, false); //mouseout
+    alert_tip_div.addEventListener('mouseenter', function() { clearTipsFadeCron(pos); }, false);
+    alert_tip_div.addEventListener('mouseleave', function() { setTipsFadeCron(pos); }, false);
     document.body.appendChild(alert_tip_div);
     setTipsFadeCron(pos);
 }
@@ -50,7 +50,7 @@ function fadeTips(pos) {
     clearTimeout(tipsFadeCronIds[pos]);
 }
 function clearTipsFadeCron(pos) {
-    clearTimeout(tipsFadeCronIds[pos]); //鼠标离开时仍使用本pos设置任务，清空与否无所谓
+    clearTimeout(tipsFadeCronIds[pos]);
 }
 function setTipsFadeCron(pos) {
     tipsFadeCronIds[pos]=window.setTimeout(function() {fadeTips(pos);},2000);
